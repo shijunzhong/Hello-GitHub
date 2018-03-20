@@ -1,0 +1,27 @@
+#Spring
+spring:
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+
+    #连接池配置    
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2: 
+      #初始化连接: 连接池启动时创建的初始化连接数量
+      initial-size: 50
+      #最大空闲连接: 连接池中容许保持空闲状态的最大连接数量,超过的空闲连接将被释放,如果设置为负数表示不限制
+      max-idle: 10
+      #最大等待时间: 当没有可用连接时,连接池等待连接被归还的最大时间(以毫秒计数),超过时间则抛出异常,如果设置为-1表示无限等待
+      max-wait-millis: 30000
+      #指明是否在从池中取出连接前进行检验,如果检验失败,则从池中去除连接并尝试取出另一个
+      test-on-borrow: true
+      #SQL查询,用来验证从连接池取出的连接,在将连接返回给调用者之前
+      validation-query: SELECT 1
+      
+#MyBatis
+mybatis:
+  mapper-locations: classpath:mybatis/dao/*.xml
+  config-locations: classpath:mybatis/mybatis-config.xml

@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.paul.entity.User",
+      "name": "User",
+      "type": "com.paul.entity.User"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.paul.entity.User",
+      "name": "User.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.paul.entity.User",
+      "name": "User.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.paul.entity.User",
+      "name": "User.user-id",
+      "type": "java.lang.Integer"
+    }
+  ]
+}

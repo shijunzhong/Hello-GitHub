@@ -1,0 +1,17 @@
+#SpringBoot Application
+server:
+  port: 80
+  contextPath: /noob
+
+spring:
+  profiles:
+    active:
+    - local
+    
+    
+User:
+  userId: 7
+  name: C-Ronaldo
+  age: 32
+
+  
