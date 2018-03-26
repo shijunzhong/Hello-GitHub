@@ -6,39 +6,43 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "User")
 public class User {
-	private Integer userId;
+    private Integer userId;
 
-	private String name;
+    private String name;
 
-	private Integer age;
+    private Integer age;
 
-	public Integer getUserId() {
-		return userId;
-	}
+    private Integer number;
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
+    public Integer getUserId() {
+        return userId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public Integer getAge() {
-		return age;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
+    public Integer getAge() {
+        return age;
+    }
 
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", name=" + name + ", age=" + age + "]";
-	}
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
 }

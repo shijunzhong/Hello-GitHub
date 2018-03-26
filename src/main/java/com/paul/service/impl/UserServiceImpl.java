@@ -18,5 +18,19 @@ public class UserServiceImpl implements UserService {
 	public List<User> find() {
 		return userMapper.find();
 	}
+
+	@Override
+	public User get(Integer userId) {
+		return userMapper.selectByPrimaryKey(userId);
+	}
+
+	@Override
+	public Integer save(User user) {
+		int i = userMapper.insertSelective(user);
+		if(i <= 0) {
+			throw new RuntimeException("新增用户失败");
+		}
+		return user.getUserId();
+	}
 	
 }

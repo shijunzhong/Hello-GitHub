@@ -20,6 +20,11 @@
     },
     {
       "sourceType": "com.paul.entity.User",
+      "name": "User.number",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.paul.entity.User",
       "name": "User.user-id",
       "type": "java.lang.Integer"
     }
