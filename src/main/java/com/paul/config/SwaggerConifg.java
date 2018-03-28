@@ -1,4 +1,4 @@
-package com.paul.application;
+package com.paul.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

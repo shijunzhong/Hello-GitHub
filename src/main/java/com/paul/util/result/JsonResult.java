@@ -1,4 +1,4 @@
-package com.paul;
+package com.paul.util.result;
 
 public class JsonResult {
 	public static final int FAILED = 0;

@@ -5,6 +5,12 @@
       "sourceType": "com.paul.entity.User",
       "name": "User",
       "type": "com.paul.entity.User"
+    },
+    {
+      "sourceType": "com.paul.config.DruidConfig",
+      "name": "spring.datasource",
+      "sourceMethod": "public javax.sql.DataSource druidDataSource() ",
+      "type": "javax.sql.DataSource"
     }
   ],
   "properties": [

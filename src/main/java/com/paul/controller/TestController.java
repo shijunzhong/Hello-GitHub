@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.paul.JsonResult;
 import com.paul.entity.User;
 import com.paul.service.UserService;
+import com.paul.util.result.JsonResult;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
