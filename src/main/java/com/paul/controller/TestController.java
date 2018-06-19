@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.pagehelper.PageInfo;
 import com.paul.entity.User;
 import com.paul.service.UserService;
 import com.paul.util.result.JsonResult;
@@ -42,7 +43,8 @@ public class TestController {
 		JsonResult jr = null;
 		try {
 			List<User> userList = userService.find();
-			jr = JsonResult.success(userList);
+			PageInfo<User> pageInfo = new PageInfo<>(userList);
+			jr = JsonResult.success(pageInfo);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 			jr = JsonResult.failed(e);
@@ -59,6 +61,7 @@ public class TestController {
 		try {
 			User user = userService.get(userId);
 			jr = JsonResult.success(user);
+			LOGGER.info("the result json is: [{}]", user.toString());
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 			jr = JsonResult.failed(e);

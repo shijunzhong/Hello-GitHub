@@ -8,11 +8,25 @@ spring:
     active:
     - local
     
-    
 User:
   userId: 7
   name: C-Ronaldo
   age: 32
   number: 7
-
+      
+#MyBatis
+mybatis:
+  mapper-locations: classpath:mybatis/dao/*.xml
+  type-aliases-package: com.paul.entity
   
+mapper:
+    mappers: com.paul.util.mapper.MyMapper
+    not-empty: false
+    identity: MYSQL
+
+#PageHelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
